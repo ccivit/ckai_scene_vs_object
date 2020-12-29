@@ -1,3 +1,6 @@
+# Data folders to avoid
+/Food-5K/
+
 # General
 .DS_Store
 .AppleDouble
