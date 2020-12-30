@@ -18,6 +18,9 @@ for split in (config.TRAIN, config.TEST, config.VAL):
 	for imagePath in imagePaths:
 		# extract class label from the filename
 		filename = imagePath.split(os.path.sep)[-1]
+		print(filename)
+		if filename[0] == '.':
+			continue
 		label = config.CLASSES[int(filename.split("_")[0])]
 
 		# construct the path to the output directory

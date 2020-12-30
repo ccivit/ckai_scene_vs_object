@@ -1,5 +1,6 @@
 # Data folders to avoid
 /Food-5K/
+/dataset/
 
 # General
 .DS_Store
