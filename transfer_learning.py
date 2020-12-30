@@ -13,11 +13,12 @@ for layer in vgg.layers:
 #Now we will be training only the classifiers (FC layers)
 
 dataset = 'Food-5K'
-categories = os.path.join(dataset, 'training')
+categories = os.listdir(os.path.join(dataset, 'training'))
 print('number of categories:',len(categories))
+print(categories)
 
 x = Flatten()(vgg.output)
-prediction = Dense(len(dataset),
+prediction = Dense(len(categories),
                    activation='softmax')(x)
 model = Model(inputs=vgg.input,
               outputs=prediction)
